@@ -1,0 +1,44 @@
+
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "username": "test",
+    "password": "test"
+}
+
+###
+POST http://localhost:5000/api/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVzdCIsImlhdCI6MTY1MTk4OTcyM30.ZpUOG0alEfS3XAs8RDQ_6nPbY7-j7kKbV6ILMRAiM3M
+
+{
+    "name": "test",
+    "age": 23,
+    "movies": [
+        {
+            "name": "test333",
+            "rating": 8,
+            "genre": "test"
+        },
+        {
+            "name": "test2",
+            "rating": 4,
+            "genre": "test2"
+        }
+    ]
+}
+
+###
+GET http://localhost:5000/api/profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVzdCIsImlhdCI6MTY1MTk4ODgxMX0.SQzj_hjftIKzsOO1HmPowVUvdNMdHHLpWqb5tFVp0CU
+
+### 
+POST http://localhost:5000/api/search
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVzdCIsImlhdCI6MTY1MTk4ODgxMX0.SQzj_hjftIKzsOO1HmPowVUvdNMdHHLpWqb5tFVp0CU
+
+{
+    "movie_name": "Tst3"
+}
